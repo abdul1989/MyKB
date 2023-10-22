@@ -1,0 +1,5 @@
+-- checking if no broker is activated or not
+SELECT is_broker_enabled FROM sys.databases WHERE name = 'CyberCafe';
+
+-- query to enable the no broker
+ALTER DATABASE CyberCafe SET ENABLE_BROKER WITH ROLLBACK IMMEDIATE
